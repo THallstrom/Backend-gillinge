@@ -25,16 +25,16 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Thomas Hemma": {
+    "Hemma": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Hemma"
       }
     },
-    "Thomas Laptop": {
+    "Laptop": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

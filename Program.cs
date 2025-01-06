@@ -24,6 +24,13 @@ builder.CreateUmbracoBuilder()
     .AddNotificationHandler<MediaSavedNotification, MediaUploadedHandler>()
     .Build();
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 104857600; // 100 MB
+    options.Limits.MaxResponseBufferSize = 104857600; // 100 MB
+});
+
+
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();
