@@ -31,7 +31,7 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Hemma"
       }
     },
     "Thomas Laptop": {
@@ -40,7 +40,7 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Laptop"
       }
     }
   }
