@@ -17,14 +17,18 @@ namespace GillingeClassicCars.Handlers
                 if (media.ContentType.Alias == "Image") // Kontrollera att det är en bild
                 {
                     // Hämta AltText från Umbraco
-                    var altText = media.GetValue<string>("altText");
+                    var altText = media.GetValue<string>("altText")?? string.Empty;
                     var filePathJson = media.GetValue<string>("umbracoFile");
 
                     // Parsar JSON för att hämta "src"-värdet
                     string blobName;
                     try
                     {
-                        var filePathData = JsonDocument.Parse(filePathJson);
+                        var options = new JsonSerializerOptions
+                        {
+                            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+                        };
+                        var filePathData = JsonSerializer.Deserialize<JsonDocument>(filePathJson, options);
                         blobName = filePathData.RootElement.GetProperty("src").GetString()?.TrimStart('/');
                     }
                     catch (Exception ex)
@@ -47,14 +51,26 @@ namespace GillingeClassicCars.Handlers
 
                     var metadata = new Dictionary<string, string>
                 {
-                    { "altText", altText }
+                    { "altText", altText ?? string.Empty }
                 };
 
-                    // Kontrollera om blobben existerar och sätt metadata
-                    //if (blobClient.Exists())
-                    //{
-                    //    blobClient.SetMetadata(metadata);
-                    //}
+                    //Kontrollera om blobben existerar och sätt metadata
+                    if (blobClient.Exists())
+                    {
+                        try
+                        {
+                            blobClient.SetMetadata(metadata);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Error setting metadata: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Blob does not exist.");
+                    }
+
                 }
             }
         }
