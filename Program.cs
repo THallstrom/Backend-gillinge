@@ -2,7 +2,6 @@ using GillingeClassicCars.Handlers;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Extensions;
 using Umbraco.StorageProviders.AzureBlob;
-using Azure.Identity;
 
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -25,11 +24,11 @@ builder.CreateUmbracoBuilder()
     .AddNotificationHandler<MediaSavedNotification, MediaUploadedHandler>()
     .Build();
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.Limits.MaxRequestBodySize = 104857600; // 100 MB
-    options.Limits.MaxResponseBufferSize = 104857600; // 100 MB
-});
+//builder.WebHost.ConfigureKestrel(options =>
+//{
+//    options.Limits.MaxRequestBodySize = 104857600; // 100 MB
+//    options.Limits.MaxResponseBufferSize = 104857600; // 100 MB
+//});
 
 
 WebApplication app = builder.Build();
