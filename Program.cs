@@ -2,6 +2,7 @@ using GillingeClassicCars.Handlers;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Extensions;
 using Umbraco.StorageProviders.AzureBlob;
+using Azure.Identity;
 
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);

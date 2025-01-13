@@ -13,7 +13,10 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Gillinge-Key": "https://gillinge-key.vault.azure.net/",
+        "gillingekey": "https://gillinge-key.vault.azure.net/",
+        "GillingeKey": "https://gillinge-key.vault.azure.net/"
       }
     },
     "Umbraco.Web.UI": {
@@ -22,7 +25,10 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Gillinge-Key": "https://gillinge-key.vault.azure.net/",
+        "gillingekey": "https://gillinge-key.vault.azure.net/",
+        "GillingeKey": "https://gillinge-key.vault.azure.net/"
       }
     },
     "Hemma": {
@@ -31,7 +37,10 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Hemma"
+        "ASPNETCORE_ENVIRONMENT": "Hemma",
+        "Gillinge-Key": "https://gillinge-key.vault.azure.net/",
+        "gillingekey": "https://gillinge-key.vault.azure.net/",
+        "GillingeKey": "https://gillinge-key.vault.azure.net/"
       }
     },
     "Laptop": {
@@ -40,7 +49,10 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:44362;http://localhost:57022",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Laptop"
+        "ASPNETCORE_ENVIRONMENT": "Laptop",
+        "Gillinge-Key": "https://gillinge-key.vault.azure.net/",
+        "gillingekey": "https://gillinge-key.vault.azure.net/",
+        "GillingeKey": "https://gillinge-key.vault.azure.net/"
       }
     }
   }
