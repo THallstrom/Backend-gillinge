@@ -50,12 +50,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Company Adress
+		/// Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "15.1.1+4f3dd04")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("companyAdress")]
-		public virtual string CompanyAdress => this.Value<string>(_publishedValueFallback, "companyAdress");
+		[ImplementPropertyType("address")]
+		public virtual string Address => this.Value<string>(_publishedValueFallback, "address");
+
+		///<summary>
+		/// City
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "15.1.1+4f3dd04")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("city")]
+		public virtual string City => this.Value<string>(_publishedValueFallback, "city");
 
 		///<summary>
 		/// Company Name
@@ -64,5 +72,29 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("companyName")]
 		public virtual string CompanyName => this.Value<string>(_publishedValueFallback, "companyName");
+
+		///<summary>
+		/// Copywrite
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "15.1.1+4f3dd04")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("copywrite")]
+		public virtual string Copywrite => this.Value<string>(_publishedValueFallback, "copywrite");
+
+		///<summary>
+		/// PhoneNumber
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "15.1.1+4f3dd04")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("phoneNumber")]
+		public virtual string PhoneNumber => this.Value<string>(_publishedValueFallback, "phoneNumber");
+
+		///<summary>
+		/// PostalCode
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "15.1.1+4f3dd04")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("postalCode")]
+		public virtual string PostalCode => this.Value<string>(_publishedValueFallback, "postalCode");
 	}
 }
